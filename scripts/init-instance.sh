@@ -17,6 +17,7 @@ sed -i 's/archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list \
     ruby-colorize \
     ruby-dev \
     tmux \
+    unzip \
     vim \
     wget \
     x11-apps\
@@ -37,7 +38,9 @@ sed -i 's/archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list \
     && mkdir /var/run/sshd
 
 # Copy dot files that pip, zsh, vim, tmux settings
-curl -L -O 
+curl -L -O https://github.com/kairos03/Ocean-public/raw/main/scripts/dot_files.zip
+unzip -o dot_files.zip /root/
+rm -f dot_files.zip
 
 #COPY --chown=root:root dot_files/.zsh** /root/
 #COPY --chown=root:root dot_files/.tmux.conf /root/
