@@ -39,7 +39,7 @@ mkdir /var/run/sshd
 
 # Copy dot files that pip, zsh, vim, tmux settings
 curl -L -O https://github.com/kairos03/Ocean-public/raw/main/scripts/dot_files.zip
-unzip -o dot_files.zip /root/
+unzip -o dot_files.zip -d /root/
 rm -f dot_files.zip
 
 # set passwd
